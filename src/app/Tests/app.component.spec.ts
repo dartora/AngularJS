@@ -1,13 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SideNavigationComponent } from '../Components/Sidebar/side-navigation.component';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent],
-    }),
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [AppComponent, SideNavigationComponent],
+    })
   );
 
   it('should create the app', () => {
@@ -27,7 +29,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'test-personal-card app is running!',
+      'test-personal-card app is running!'
     );
   });
 });
