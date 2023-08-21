@@ -1,0 +1,9 @@
+<div class="posts-content">
+  <h1>Lista de Posts</h1>
+  <div *ngIf="posts">
+    <div *ngFor="let post of posts">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</div>

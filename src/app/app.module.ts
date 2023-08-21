@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './Components/Users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SideNavigationComponent } from './Components/Sidebar/side-navigation.component';
+import { PostsComponent } from './Pages/Posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
