@@ -19,12 +19,7 @@ export class UserService {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`,
     });
-    return this.http.get(this.apiUrl, { headers }).pipe(
-      tap((response) => console.log('Response from API:', response)),
-      catchError((error) => {
-        console.error('Error:', error);
-        throw error;
-      })
-    );
+
+    return this.http.get(this.apiUrl, { headers });
   }
 }

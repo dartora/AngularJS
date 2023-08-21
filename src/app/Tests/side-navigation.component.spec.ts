@@ -8,7 +8,7 @@ describe('SideNavigationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SideNavigationComponent]
+      declarations: [SideNavigationComponent],
     });
     fixture = TestBed.createComponent(SideNavigationComponent);
     component = fixture.componentInstance;

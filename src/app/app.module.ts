@@ -12,14 +12,10 @@ import { PostsComponent } from './Pages/Posts/posts.component';
     AppComponent,
     UsersComponent,
     SideNavigationComponent,
-    PostsComponent
+    PostsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
