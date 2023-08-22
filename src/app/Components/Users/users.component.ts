@@ -17,11 +17,12 @@ export class UsersComponent {
   loadUsers() {
     this.userService.getUsers().subscribe(
       (response: any) => {
+        console.log(response, 'oi');
         this.users = response; // Assign the response data to 'this.users'
       },
       (error) => {
         console.error('Error:', error);
-      },
+      }
     );
   }
 }

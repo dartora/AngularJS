@@ -18,19 +18,23 @@ mat-sidenav span,mat-sidenav mat-icon {
 }
 
 .content {
-  height: calc(100vh - 98px);
+  // height: calc(100vh - 98px);
   border-radius: 10px;
   margin: 16px;
   margin-left: 32px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 2rem;
-  color: lightgray;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center  // font-size: 2rem;
+  // color: lightgray;
 }
 
 mat-sidenav-container {
   height: calc(100vh - 65px);
+}
+.sidebar-logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Remove any inline spacing */
+  /* Add any other styles as needed */
 }

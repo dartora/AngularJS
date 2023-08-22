@@ -1,16 +1,32 @@
-<mat-toolbar> Responsive side navigation </mat-toolbar>
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <img src="assets/logo.webp" alt="Logo" class="sidebar-logo" />
+</mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav [opened]="true" class="mat-elevation-z8">
-    <button mat-button class="menu-button">
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <button
+      mat-button
+      class="menu-button"
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" routerLink="/users">
       <mat-icon>users</mat-icon>
       <span>Usuários</span>
     </button>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" routerLink="/posts">
       <mat-icon>post</mat-icon>
       <span>Posts</span>
     </button>
@@ -24,6 +40,8 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">Main content here!</div>
+    <div class="content mat-elevation-z8"><router-outlet /></div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<!-- <router-outlet></router-outlet> -->
