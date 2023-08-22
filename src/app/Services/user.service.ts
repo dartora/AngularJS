@@ -22,4 +22,12 @@ export class UserService {
 
     return this.http.get(this.apiUrl, { headers });
   }
+
+  deleteUser(userId: number): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${this.token}`,
+    });
+
+    return this.http.delete(`${this.apiUrl}/${userId}`, { headers });
+  }
 }

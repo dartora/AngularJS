@@ -11,10 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-// import { TableComponent } from './Components/Table/table.component';
-// import { FormsModule } from '@angular/forms';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [AppComponent, UsersComponent, PostsComponent],
@@ -28,10 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    // FormsModule,
-    // MatFormFieldModule,
-    // MatInputModule,
-    // TableComponent,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

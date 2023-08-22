@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../ConfirmDialog/confirm-dialog.component'; // Adjust the import path
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -26,10 +29,13 @@ export class TableComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'email', 'gender', 'status', 'actions'];
   dataSource = new MatTableDataSource<IUser>([]);
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private dialog: MatDialog
+  ) {
     this.paginator = {} as MatPaginator;
   }
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
 
@@ -59,8 +65,28 @@ export class TableComponent implements AfterViewInit {
   }
 
   deleteUser(userId: number) {
-    // Implement your delete logic here
-    // For example, you can show a confirmation dialog and delete the user if confirmed
+    // Open the confirmation dialog
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '250px', // Adjust the dialog width
+      data: 'Você realmente deseja deletar permanentemente esse usuário?', // Pass confirmation message
+    });
+
+    // Handle the dialog result
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        // User confirmed the deletion, call the deleteUser method
+        this.userService.deleteUser(userId).subscribe(
+          (response) => {
+            // Handle successful deletion, for example, update the user list
+            this.loadUsers();
+          },
+          (error) => {
+            console.error('Error deleting user:', error);
+            // Handle error, show an error message to the user
+          }
+        );
+      }
+    });
 
     // Close the menu after action
     this.menuTrigger.closeMenu();
