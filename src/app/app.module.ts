@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { TableModule } from './Components/Table/table.module';
+import { EditUserModalModule } from './Components/EditUserModal/edit-user-modal.module';
 @NgModule({
   declarations: [AppComponent, UsersComponent, PostsComponent],
   imports: [
@@ -25,6 +26,7 @@ import { TableModule } from './Components/Table/table.module';
     MatIconModule,
     MatDividerModule,
     TableModule,
+    EditUserModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

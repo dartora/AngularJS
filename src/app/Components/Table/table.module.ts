@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { ConfirmDialogModule } from '../ConfirmDialog/confirm-dialog.module'; // Import the ConfirmDialogModule
 import { TableComponent } from './table.component';
+import { EditUserModalModule } from '../EditUserModal/edit-user-modal.module';
 
 @NgModule({
   declarations: [TableComponent],
@@ -20,6 +21,7 @@ import { TableComponent } from './table.component';
     MatIconModule,
     MatMenuModule,
     ConfirmDialogModule, // Add ConfirmDialogModule here
+    EditUserModalModule,
   ],
   exports: [TableComponent],
 })

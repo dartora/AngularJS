@@ -1,0 +1,44 @@
+<h2>Edit User</h2>
+<form [formGroup]="editForm" (ngSubmit)="saveUser()">
+  <mat-form-field>
+    <input matInput formControlName="name" placeholder="Name" />
+    <mat-error *ngIf="editForm.get('name')?.hasError('required')"
+      >Name is required</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="email" placeholder="Email" />
+    <mat-error *ngIf="editForm.get('email')?.hasError('required')"
+      >Email is required</mat-error
+    >
+    <mat-error *ngIf="editForm.get('email')?.hasError('email')"
+      >Invalid email address</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <input matInput formControlName="gender" placeholder="" />
+    <mat-error *ngIf="editForm.get('gender')?.hasError('required')"
+      >Gender is required</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <input matInput formControlName="status" placeholder="" />
+
+    <!-- <mat-select formControlName="status">
+      <mat-option value="active">Active</mat-option>
+      <mat-option value="inactive">Inactive</mat-option>
+    </mat-select> -->
+    <mat-error *ngIf="editForm.get('status')?.hasError('required')"
+      >Status is required</mat-error
+    >
+  </mat-form-field>
+
+  <!-- Other form fields -->
+
+  <button mat-raised-button color="primary" type="submit">Save</button>
+  <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+</form>

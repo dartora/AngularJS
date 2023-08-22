@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../ConfirmDialog/confirm-dialog.component'; // Adjust the import path
+import { EditUserModalComponent } from '../EditUserModal/edit-user-modal.component';
 
 @Component({
   selector: 'app-table',
@@ -46,7 +47,7 @@ export class TableComponent implements AfterViewInit {
     // Implement your edit logic here
     // For example, you can navigate to the edit page
     // this.router.navigate(['/edit-user', userId]);
-
+    const dialogRef = this.dialog.open(EditUserModalComponent);
     // Close the menu after action
     this.menuTrigger.closeMenu();
   }

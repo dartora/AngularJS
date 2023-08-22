@@ -15,10 +15,10 @@ describe('ConfirmDialogComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ConfirmDialogComponent],
-      imports: [ConfirmDialogModule, MatDialogModule], // Include MatDialogModule
+      imports: [ConfirmDialogModule],
       providers: [
-        { provide: MatDialogRef, useValue: {} }, // You can customize this value if necessary
-        { provide: MAT_DIALOG_DATA, useValue: {} }, // You can customize this value if necessary
+        { provide: MatDialogRef, useValue: {} },
+        { provide: MAT_DIALOG_DATA, useValue: {} },
       ],
     });
     fixture = TestBed.createComponent(ConfirmDialogComponent);
