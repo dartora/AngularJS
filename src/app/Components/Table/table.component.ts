@@ -2,11 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { UserService } from 'src/app/Services/user.service';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../ConfirmDialog/confirm-dialog.component'; // Adjust the import path
@@ -15,15 +11,6 @@ import { ConfirmDialogComponent } from '../ConfirmDialog/confirm-dialog.componen
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
-  standalone: true,
-  imports: [
-    MatTableModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatMenuModule,
-  ],
 })
 export class TableComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'email', 'gender', 'status', 'actions'];

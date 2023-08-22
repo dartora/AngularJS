@@ -3,13 +3,19 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SideNavigationComponent } from '../Components/Sidebar/side-navigation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { AppModule } from '../app.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientModule],
+      imports: [AppModule],
       declarations: [AppComponent, SideNavigationComponent],
-    })
+    }).compileComponents()
   );
 
   it('should create the app', () => {
@@ -26,10 +32,10 @@ describe('AppComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'test-personal-card app is running!'
-    );
+    fixture.detectChanges(); // Trigger change detection to update the view
+    const compiled = fixture.nativeElement;
+    const sidebarLogoElement = compiled.querySelector('.sidebar-logo');
+
+    expect(sidebarLogoElement).toBeTruthy();
   });
 });
