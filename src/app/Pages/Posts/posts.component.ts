@@ -17,9 +17,7 @@ export class PostsComponent {
 
   loadPosts() {
     this.postsService.getPosts().subscribe((response: any) => {
-      console.log(response.data);
       this.posts = response;
-      console.log(this.posts);
     });
   }
 }

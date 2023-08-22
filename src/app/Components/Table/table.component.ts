@@ -34,7 +34,6 @@ export class TableComponent implements AfterViewInit {
   loadUsers() {
     this.userService.getUsers().subscribe(
       (response: any) => {
-        console.log(response, 'oi');
         this.dataSource.data = response; // Assign the response data to 'this.users'
       },
       (error) => {
