@@ -13,10 +13,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { TableModule } from './Components/Table/table.module';
 import { EditUserModalModule } from './Components/EditUserModal/edit-user-modal.module';
 import { PostsModule } from './Components//Posts/posts.module';
-import { CreateUserComponent } from './Components/create-user/create-user.component';
+import { CreateUserComponent } from './Components/CreateUser/create-user.component';
+import { CreateUserModule } from './Components/CreateUser/create-user.module';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, CreateUserComponent],
+  declarations: [AppComponent, UsersComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -30,6 +31,7 @@ import { CreateUserComponent } from './Components/create-user/create-user.compon
     TableModule,
     EditUserModalModule,
     PostsModule,
+    CreateUserModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

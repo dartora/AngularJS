@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './Components/Posts/posts.component';
 import { TableComponent } from './Components/Table/table.component';
+import { CreateUserComponent } from './Components/CreateUser/create-user.component';
 
 const routes: Routes = [
-  { path: 'users', component: TableComponent },
+  { path: 'usuarios', component: TableComponent },
   { path: 'posts', component: PostsComponent },
-  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: 'criar-usuario', component: CreateUserComponent },
+
+  { path: '', redirectTo: '/usuarios', pathMatch: 'full' },
 ];
 
 @NgModule({

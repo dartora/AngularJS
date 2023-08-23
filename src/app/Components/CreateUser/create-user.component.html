@@ -1,1 +1,44 @@
-<p>create-user works!</p>
+<h2>Criar Usuario</h2>
+<form [formGroup]="registerForm" (ngSubmit)="saveUser()">
+  <mat-form-field>
+    <input matInput formControlName="name" placeholder="Name" />
+    <mat-error *ngIf="registerForm.get('name')?.hasError('required')"
+      >Name is required</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="email" placeholder="Email" />
+    <mat-error *ngIf="registerForm.get('email')?.hasError('required')"
+      >Email is required</mat-error
+    >
+    <mat-error *ngIf="registerForm.get('email')?.hasError('email')"
+      >Invalid email address</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="gender" placeholder="Gender" />
+    <mat-error *ngIf="registerForm.get('gender')?.hasError('required')"
+      >Gender is required</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="status" placeholder="Status" />
+    <mat-error *ngIf="registerForm.get('status')?.hasError('required')"
+      >Status is required</mat-error
+    >
+  </mat-form-field>
+</form>
+<div class="buttons">
+  <button mat-button type="button">Cancelar</button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    (onSubmit)="saveUser()"
+  >
+    Salvar
+  </button>
+</div>

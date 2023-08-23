@@ -46,4 +46,10 @@ export class UserService {
     });
     return this.http.put(`${this.apiUrl}/${userId}`, userData, { headers });
   }
+  createUser(userData: any): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${this.token}`,
+    });
+    return this.http.post(`${this.apiUrl}`, userData, { headers });
+  }
 }
