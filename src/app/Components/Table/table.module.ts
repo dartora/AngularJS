@@ -20,7 +20,7 @@ import { EditUserModalModule } from '../EditUserModal/edit-user-modal.module';
     MatInputModule,
     MatIconModule,
     MatMenuModule,
-    ConfirmDialogModule, // Add ConfirmDialogModule here
+    ConfirmDialogModule,
     EditUserModalModule,
   ],
   exports: [TableComponent],

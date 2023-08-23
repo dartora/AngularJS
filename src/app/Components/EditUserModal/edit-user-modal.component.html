@@ -1,4 +1,4 @@
-<h2>Edit User</h2>
+<h2>Editar Usuario</h2>
 <form [formGroup]="editForm" (ngSubmit)="saveUser()">
   <mat-form-field>
     <input matInput formControlName="name" placeholder="Name" />
@@ -16,29 +16,29 @@
       >Invalid email address</mat-error
     >
   </mat-form-field>
+
   <mat-form-field>
-    <mat-label>Gender</mat-label>
-    <input matInput formControlName="gender" placeholder="" />
+    <input matInput formControlName="gender" placeholder="Gender" />
     <mat-error *ngIf="editForm.get('gender')?.hasError('required')"
       >Gender is required</mat-error
     >
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Status</mat-label>
-    <input matInput formControlName="status" placeholder="" />
-
-    <!-- <mat-select formControlName="status">
-      <mat-option value="active">Active</mat-option>
-      <mat-option value="inactive">Inactive</mat-option>
-    </mat-select> -->
+    <input matInput formControlName="status" placeholder="Status" />
     <mat-error *ngIf="editForm.get('status')?.hasError('required')"
       >Status is required</mat-error
     >
   </mat-form-field>
-
-  <!-- Other form fields -->
-
-  <button mat-raised-button color="primary" type="submit">Save</button>
-  <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+  <div class="buttons">
+    <button mat-button type="button" (click)="closeDialog()">Cancelar</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      (onSubmit)="saveUser()"
+    >
+      Salvar
+    </button>
+  </div>
 </form>

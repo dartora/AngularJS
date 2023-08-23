@@ -23,11 +23,26 @@ export class UserService {
     return this.http.get(this.apiUrl, { headers });
   }
 
+  getUserById(userId: number): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${this.token}`,
+    });
+
+    return this.http.get(`${this.apiUrl}/${userId}`, { headers });
+  }
+
   deleteUser(userId: number): Observable<any> {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`,
     });
 
     return this.http.delete(`${this.apiUrl}/${userId}`, { headers });
+  }
+
+  updateUser(userId: number, userData: any): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${this.token}`,
+    });
+    return this.http.put(`${this.apiUrl}/${userId}`, userData, { headers });
   }
 }

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from 'src/app/Services/user.service';
 import { Router } from '@angular/router';
 import { MatMenuTrigger } from '@angular/material/menu';
@@ -16,6 +16,7 @@ import { EditUserModalComponent } from '../EditUserModal/edit-user-modal.compone
 export class TableComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'email', 'gender', 'status', 'actions'];
   dataSource = new MatTableDataSource<IUser>([]);
+  user = new MatTableDataSource<IUser>();
 
   constructor(
     private userService: UserService,
@@ -42,13 +43,29 @@ export class TableComponent implements AfterViewInit {
     );
   }
 
-  editUser(userId: number) {
-    // Implement your edit logic here
-    // For example, you can navigate to the edit page
-    // this.router.navigate(['/edit-user', userId]);
-    const dialogRef = this.dialog.open(EditUserModalComponent);
-    // Close the menu after action
-    this.menuTrigger.closeMenu();
+  async editUser(userId: number) {
+    // Fetch the user details based on the userId
+    const user = await this.fetchUserDetails(userId);
+
+    if (user) {
+      const dialogRef = this.dialog.open(EditUserModalComponent, {
+        width: '30%', // Adjust the dialog width
+        data: user, // Pass the user object as data
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        if (result) this.loadUsers();
+      });
+    }
+  }
+
+  async fetchUserDetails(userId: number): Promise<IUser | null> {
+    try {
+      const response = await this.userService.getUserById(userId).toPromise();
+      return response as IUser; // Assuming your API response matches the IUser interface
+    } catch (error) {
+      console.error('Error:', error);
+      return null; // Return null in case of an error
+    }
   }
 
   deleteUser(userId: number) {
