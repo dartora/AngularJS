@@ -50,6 +50,7 @@ export class UserService {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`,
     });
+    console.log('oi', `${this.apiUrl}`, userData, { headers });
     return this.http.post(`${this.apiUrl}`, userData, { headers });
   }
 }

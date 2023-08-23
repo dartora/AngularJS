@@ -4,16 +4,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { CreateUserComponent } from './create-user.component';
+import { UsersComponent } from './users.component';
 @NgModule({
-  declarations: [CreateUserComponent],
-  imports: [
-    CommonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatInputModule,
-  ],
-  exports: [CreateUserComponent],
+  declarations: [UsersComponent],
+  imports: [],
+  exports: [UsersComponent],
 })
-export class CreateUserModule {}
+export class UsersModule {}

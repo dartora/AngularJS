@@ -1,0 +1,108 @@
+
+/* Apply box-sizing to pseudo-elements */
+body::after,
+body::before,
+input::after,
+input::before,
+textarea::after,
+textarea::before,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+
+/* Background styles for body */
+body {
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: linear-gradient(top, #f2f2f2, #e6e6e6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 42rem;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.buttons {
+  padding-bottom: 10px;
+}
+/* Container styles */
+.container {
+  display: flex;
+  position: relative;
+  max-width: 40rem;
+  margin: 5rem auto;
+  background: #fff;
+  width: 100%;
+  padding: 3rem 5rem;
+  border-radius: 1px;
+}
+
+/* Container shadow on hover */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12),
+              0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+  transition: transform 0.28s ease-in-out;
+  z-index: -1;
+}
+
+/* Container shadow scale on hover */
+.container:hover::before {
+  transform: scale(1);
+}
+
+/* Fieldset styles */
+fieldset {
+  margin: 0 0 3rem;
+  padding: 0;
+  border: none;
+}
+
+/* Form elements styles */
+.mat-form-field {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+  width: 100%;
+}
+
+/* Form help text styles */
+.mat-error {
+  color: #b3b3b3;
+  font-size: 0.8rem;
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+}
+
+/* Button styles */
+.buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Cancel button styles */
+button.mat-button {
+  margin-right: 1rem;
+}
+
+/* Save button styles */
+button.mat-raised-button[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+/* Add any additional styles you may need */

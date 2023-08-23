@@ -1,23 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
-  selector: 'app-create-user',
+  selector: 'app-test',
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css'],
 })
 export class CreateUserComponent implements OnInit {
-  registerForm: FormGroup;
-
+  registerForm!: FormGroup;
   constructor(
-    public dialogRef: MatDialogRef<CreateUserComponent>,
+    // public dialogRef: MatDialogRef<CreateUserComponent>,
     private formBuilder: FormBuilder,
     private userService: UserService
   ) {
@@ -28,20 +26,18 @@ export class CreateUserComponent implements OnInit {
       status: new FormControl(''),
     });
   }
-
   ngOnInit() {
     this.buildForm();
   }
 
   buildForm() {
     this.registerForm = this.formBuilder.group({
-      name: [new FormControl(''), Validators.required],
-      email: [new FormControl(''), [Validators.required, Validators.email]],
-      gender: [new FormControl(''), Validators.required],
-      status: [new FormControl(''), Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      gender: ['', Validators.required],
+      status: ['', Validators.required],
     });
   }
-
   saveUser(): void {
     if (this.registerForm.valid) {
       const userData = this.registerForm.value;

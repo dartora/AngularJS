@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './Components/Users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,11 +12,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { TableModule } from './Components/Table/table.module';
 import { EditUserModalModule } from './Components/EditUserModal/edit-user-modal.module';
 import { PostsModule } from './Components//Posts/posts.module';
-import { CreateUserComponent } from './Components/CreateUser/create-user.component';
 import { CreateUserModule } from './Components/CreateUser/create-user.module';
+import { UsersModule } from './Components/Users/users.module';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent],
+  declarations: [AppComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -32,6 +31,7 @@ import { CreateUserModule } from './Components/CreateUser/create-user.module';
     EditUserModalModule,
     PostsModule,
     CreateUserModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
