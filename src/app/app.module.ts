@@ -12,10 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { TableModule } from './Components/Table/table.module';
 import { EditUserModalModule } from './Components/EditUserModal/edit-user-modal.module';
-import { PostsModule } from './Pages/Posts/posts.module';
+import { PostsModule } from './Components//Posts/posts.module';
+import { CreateUserComponent } from './Components/create-user/create-user.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent],
+  declarations: [AppComponent, UsersComponent, CreateUserComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

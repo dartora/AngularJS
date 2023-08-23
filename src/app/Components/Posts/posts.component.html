@@ -15,7 +15,7 @@
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
       <p *ngIf="userNames[post.user_id] !== undefined">
-        Author: {{ userNames[post.user_id] }}
+        <b>Author:</b> {{ userNames[post.user_id] }}
       </p>
     </div>
   </div>

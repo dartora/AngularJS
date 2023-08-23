@@ -1,3 +1,6 @@
 .posts-content {
   padding-left: 1%;
 }
+mat-form-field {
+  width: 100%;
+}

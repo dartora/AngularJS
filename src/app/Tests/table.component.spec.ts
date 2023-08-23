@@ -2,9 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableComponent } from '../Components/Table/table.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material/dialog';
-import { ConfirmDialogModule } from '../Components/ConfirmDialog/confirm-dialog.module';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { TableModule } from '../Components/Table/table.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
-import { PostsComponent } from '../Pages/Posts/posts.component';
-import { PostsModule } from '../Pages/Posts/posts.module';
+import { PostsComponent } from '../Components/Posts/posts.component';
+import { PostsModule } from '../Components//Posts/posts.module';
 
 describe('PostsComponent', () => {
   let component: PostsComponent;

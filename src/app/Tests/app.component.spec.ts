@@ -1,13 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '../app.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SideNavigationComponent } from '../Components/Sidebar/side-navigation.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
 import { AppModule } from '../app.module';
 
 describe('AppComponent', () => {
