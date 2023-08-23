@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, catchError, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IUser } from '../Components/Table/table.component';
 
 @Injectable({
   providedIn: 'root',
@@ -23,12 +24,12 @@ export class UserService {
     return this.http.get(this.apiUrl, { headers });
   }
 
-  getUserById(userId: number): Observable<any> {
+  getUserById(userId: number): Observable<IUser> {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`,
     });
 
-    return this.http.get(`${this.apiUrl}/${userId}`, { headers });
+    return this.http.get<IUser>(`${this.apiUrl}/${userId}`, { headers });
   }
 
   deleteUser(userId: number): Observable<any> {

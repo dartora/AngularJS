@@ -1,9 +1,26 @@
 <div class="posts-content">
   <h1>Lista de Posts</h1>
-  <div *ngIf="posts">
-    <div *ngFor="let post of posts">
+  <div class="search-field">
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="searchQuery"
+        (keyup)="applyFilter()"
+        placeholder="Digite para filtrar.."
+      />
+    </mat-form-field>
+  </div>
+  <div *ngIf="filteredPosts.length > 0; else noPostsFound">
+    <div *ngFor="let post of filteredPosts">
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
+      <p *ngIf="userNames[post.user_id] !== undefined">
+        Author: {{ userNames[post.user_id] }}
+      </p>
     </div>
   </div>
+
+  <ng-template #noPostsFound>
+    <p>No posts found.</p>
+  </ng-template>
 </div>

@@ -2,6 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditUserModalComponent } from '../Components/EditUserModal/edit-user-modal.component';
 import { EditUserModalModule } from '../Components/EditUserModal/edit-user-modal.module';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('EditUserModalComponent', () => {
   let component: EditUserModalComponent;
@@ -10,12 +13,27 @@ describe('EditUserModalComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [EditUserModalComponent],
-      imports: [EditUserModalModule],
+      imports: [EditUserModalModule, HttpClientModule, BrowserAnimationsModule],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: {},
+        },
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: {},
+        },
+      ],
     });
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(EditUserModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  // Add your test cases here
 
   it('should create', () => {
     expect(component).toBeTruthy();
