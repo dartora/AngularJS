@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { CreateUserComponent } from './create-user.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [CreateUserComponent],
   imports: [
@@ -15,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     MatInputModule,
     MatSnackBarModule,
+    MatSelectModule,
   ],
   exports: [CreateUserComponent],
 })
