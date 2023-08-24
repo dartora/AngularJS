@@ -4,12 +4,17 @@ form {
   border-radius: 10px;
 }
 button {
-  margin:10px;
+  margin: 10px;
+  background: rgb(5, 104, 57);
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 h2 {
-  margin:10px;
+  margin: 10px;
 }
 .buttons {
   margin: auto;
 }
-

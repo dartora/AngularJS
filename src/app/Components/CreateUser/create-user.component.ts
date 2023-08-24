@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-test',
@@ -17,7 +18,8 @@ export class CreateUserComponent implements OnInit {
   constructor(
     // public dialogRef: MatDialogRef<CreateUserComponent>,
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private _snackBar: MatSnackBar
   ) {
     this.registerForm = formBuilder.group({
       name: new FormControl(''),
@@ -43,11 +45,25 @@ export class CreateUserComponent implements OnInit {
       const userData = this.registerForm.value;
       this.userService.createUser(userData).subscribe(
         (response) => {
-          console.log(response);
+          this.registerForm.reset();
+          this._snackBar.open('Usuário cadastrado com sucesso!', 'Close', {
+            duration: 100000, // Duration in milliseconds
+            panelClass: ['success-snackbar', 'bg-green', 'text-white'],
+          });
         },
         (error) => {
           console.error('Error updating user data:', error);
-          console.error(error);
+          this._snackBar.open(
+            'Erro ao criar usuário: ' +
+              error.error[0].field +
+              ' ' +
+              error.error[0].message,
+            'Close',
+            {
+              duration: 10000, // Duration in milliseconds
+              panelClass: ['error-snackbar'], // You can define custom styles for error snackbar
+            }
+          );
         }
       );
     }

@@ -7,6 +7,9 @@
         placeholder="Digite para filtrar.."
       />
     </mat-form-field>
+    <button mat-raised-button color="primary" routerLink="/criar-usuario">
+      Criar Usuário
+    </button>
   </div>
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="name">
@@ -47,9 +50,9 @@
         </mat-menu>
       </td>
     </ng-container>
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <button>aaaa</button>
   </table>
 
   <mat-paginator

@@ -1,5 +1,19 @@
-.search-field  mat-form-field{
+.search-field {
   width: 100%;
+}
+.search-field mat-form-field {
+  width: 85%;
+}
+.search-field button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(5, 104, 57);
+  color: white;
+  margin-left: 2%;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
 }
 .table {
   border-radius: 10px;

@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ConfirmDialogModule } from '../ConfirmDialog/confirm-dialog.module'; // Import the ConfirmDialogModule
 import { TableComponent } from './table.component';
 import { EditUserModalModule } from '../EditUserModal/edit-user-modal.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [TableComponent],
@@ -22,6 +23,7 @@ import { EditUserModalModule } from '../EditUserModal/edit-user-modal.module';
     MatMenuModule,
     ConfirmDialogModule,
     EditUserModalModule,
+    AppRoutingModule,
   ],
   exports: [TableComponent],
 })

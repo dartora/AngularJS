@@ -1,0 +1,11 @@
+button {
+  margin: 10px;
+  background: rgb(5, 104, 57);
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+}

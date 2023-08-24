@@ -6,6 +6,9 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [PostsComponent],
@@ -16,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
   ],
 })
 export class PostsModule {}

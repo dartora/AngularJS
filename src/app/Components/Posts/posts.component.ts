@@ -69,6 +69,8 @@ export class PostsComponent implements OnInit {
       }
     });
   }
+  editPost() {}
+  deletePost() {}
 }
 
 export interface IPost {

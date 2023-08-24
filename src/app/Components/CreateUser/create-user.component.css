@@ -1,15 +1,4 @@
-
 /* Apply box-sizing to pseudo-elements */
-body::after,
-body::before,
-input::after,
-input::before,
-textarea::after,
-textarea::before,
-body *::after,
-body *::before {
-  box-sizing: border-box;
-}
 
 /* Background styles for body */
 body {
@@ -47,15 +36,14 @@ h2 {
 
 /* Container shadow on hover */
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-              0 3px 14px 2px rgba(0, 0, 0, 0.12),
-              0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
   transform: scale(0.98);
   transition: transform 0.28s ease-in-out;
   z-index: -1;
@@ -93,16 +81,13 @@ fieldset {
   text-align: center;
   margin-top: 2rem;
 }
-
-/* Cancel button styles */
-button.mat-button {
-  margin-right: 1rem;
+button {
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: rgb(5, 104, 57);
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
 }
-
-/* Save button styles */
-button.mat-raised-button[type="submit"] {
-  background-color: #337ab7;
-  color: #fff;
-}
-
-/* Add any additional styles you may need */

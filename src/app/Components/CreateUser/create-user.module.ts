@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { CreateUserComponent } from './create-user.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [CreateUserComponent],
   imports: [
@@ -13,6 +14,7 @@ import { CreateUserComponent } from './create-user.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSnackBarModule,
   ],
   exports: [CreateUserComponent],
 })

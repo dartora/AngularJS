@@ -2,5 +2,16 @@
   padding-left: 1%;
 }
 mat-form-field {
-  width: 100%;
+  width: 85%;
+}
+.post{
+  border: solid 1px black;
+  border-radius: 10px;
+  width:80%;
+  margin:10px;
+  padding: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align the content to the right */
 }
