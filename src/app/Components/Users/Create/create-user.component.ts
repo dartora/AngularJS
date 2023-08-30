@@ -16,7 +16,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CreateUserComponent implements OnInit {
   registerForm!: FormGroup;
   constructor(
-    // public dialogRef: MatDialogRef<CreateUserComponent>,
     private formBuilder: FormBuilder,
     private userService: UserService,
     private _snackBar: MatSnackBar
@@ -61,7 +60,7 @@ export class CreateUserComponent implements OnInit {
             'Close',
             {
               duration: 10000, // Duration in milliseconds
-              panelClass: ['error-snackbar'], // You can define custom styles for error snackbar
+              panelClass: ['error-snackbar'], //!alert You can define custom styles for error snackbar !!not working
             }
           );
         }

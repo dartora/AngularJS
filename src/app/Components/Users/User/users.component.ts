@@ -6,7 +6,7 @@ import { UserService } from '../../../Services/user.service';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  users: any[] = []; // Declare a 'users' property here
+  users: any[] = [];
 
   constructor(private userService: UserService) {}
 
@@ -17,7 +17,7 @@ export class UsersComponent {
   loadUsers() {
     this.userService.getUsers().subscribe(
       (response: any) => {
-        this.users = response; // Assign the response data to 'this.users'
+        this.users = response;
       },
       (error) => {
         console.error('Error:', error);

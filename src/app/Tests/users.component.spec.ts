@@ -10,7 +10,7 @@ describe('UsersComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [UsersComponent],
-      imports: [HttpClientModule], // Add HttpClientModule to the imports
+      imports: [HttpClientModule],
     });
     fixture = TestBed.createComponent(UsersComponent);
     component = fixture.componentInstance;

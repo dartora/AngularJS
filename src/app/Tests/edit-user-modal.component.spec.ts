@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditUserModalComponent } from '../Components/Users/Edit/edit-user-modal.component';
-import { EditUserModalModule } from '../Components/Users/Edit/edit-user-modal.module';
+import { EditUserModalComponent } from '../Components/Users/EditModal/edit-user-modal.component';
+import { EditUserModalModule } from '../Components/Users/EditModal/edit-user-modal.module';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

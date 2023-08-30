@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { TableModule } from './Components/Users/Table/table.module';
-import { EditUserModalModule } from './Components/Users/Edit/edit-user-modal.module';
+import { EditUserModalModule } from './Components/Users/EditModal/edit-user-modal.module';
 import { PostsModule } from './Components//Posts/posts.module';
 import { CreateUserModule } from './Components/Users/Create/create-user.module';
 import { UsersModule } from './Components/Users/User/users.module';

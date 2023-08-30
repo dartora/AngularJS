@@ -8,13 +8,9 @@ import { environment } from '../../environments/environment';
 })
 export class UserService {
   private apiUrl = environment.apiUrl;
-  private token = environment.apiToken; // Substitua pelo seu token de API
-
+  private token = environment.apiToken;
   constructor(private http: HttpClient) {}
 
-  // Métodos para acessar a API aqui...
-
-  // UserService
   getUsers(): Observable<any> {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${this.token}`,
