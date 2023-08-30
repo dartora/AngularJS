@@ -18,14 +18,20 @@
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput formControlName="gender" placeholder="Gender" />
+    <mat-select formControlName="gender" placeholder="Gender">
+      <mat-option value="male">Male</mat-option>
+      <mat-option value="female">Female</mat-option>
+    </mat-select>
     <mat-error *ngIf="editForm.get('gender')?.hasError('required')"
       >Gender is required</mat-error
     >
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput formControlName="status" placeholder="Status" />
+    <mat-select formControlName="status" placeholder="Status">
+      <mat-option value="active">Active</mat-option>
+      <mat-option value="inactive">Inactive</mat-option>
+    </mat-select>
     <mat-error *ngIf="editForm.get('status')?.hasError('required')"
       >Status is required</mat-error
     >

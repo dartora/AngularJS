@@ -5,6 +5,7 @@ import { EditUserModalComponent } from './edit-user-modal.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [EditUserModalComponent],
   imports: [
@@ -13,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
   ],
   exports: [EditUserModalComponent],
 })
