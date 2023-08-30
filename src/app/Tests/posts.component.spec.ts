@@ -17,6 +17,7 @@ describe('PostsComponent', () => {
   });
 
   it('should create', () => {
+    //@ts-ignore
     expect(component).toBeTruthy();
   });
 });

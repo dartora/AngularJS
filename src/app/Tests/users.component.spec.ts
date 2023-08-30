@@ -18,6 +18,7 @@ describe('UsersComponent', () => {
   });
 
   it('should create', () => {
+    //@ts-ignore
     expect(component).toBeTruthy();
   });
 });

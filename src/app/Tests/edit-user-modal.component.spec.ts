@@ -36,6 +36,7 @@ describe('EditUserModalComponent', () => {
   // Add your test cases here
 
   it('should create', () => {
+    //@ts-ignore
     expect(component).toBeTruthy();
   });
 });
