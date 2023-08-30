@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersComponent } from '../Components/Users/users.component';
+import { UsersComponent } from '../Components/Users/User/users.component';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('UsersComponent', () => {

@@ -19,7 +19,7 @@ describe('Create User', () => {
     cy.get('#mat-option-3').click(); //Male
     cy.get('#mat-select-value-5').click();
     cy.get('#mat-option-5').click();
-    cy.get('.buttons > button').click();
+    cy.get('.saveButton > button').click();
 
     cy.get(
       '#mat-snack-bar-container-live-0 > div > simple-snack-bar > div.mat-mdc-snack-bar-label.mdc-snackbar__label'
@@ -45,7 +45,7 @@ describe('Create User', () => {
     cy.get('#mat-select-value-5').click();
     cy.get('#mat-option-5').click();
 
-    cy.get('.buttons > button').click();
+    cy.get('.saveButton > button').click();
 
     cy.get(
       '#mat-snack-bar-container-live-0 > div > simple-snack-bar > div.mat-mdc-snack-bar-label.mdc-snackbar__label'

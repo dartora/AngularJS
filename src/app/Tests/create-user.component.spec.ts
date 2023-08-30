@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CreateUserComponent } from '../Components/CreateUser/create-user.component';
-import { CreateUserModule } from '../Components/CreateUser/create-user.module';
+import { CreateUserComponent } from '../Components/Users/Create/create-user.component';
+import { CreateUserModule } from '../Components/Users/Create/create-user.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

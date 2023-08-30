@@ -6,9 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { ConfirmDialogModule } from '../ConfirmDialog/confirm-dialog.module'; // Import the ConfirmDialogModule
+import { ConfirmDialogModule } from '../Delete/delete-dialog.module'; // Import the ConfirmDialogModule
 import { TableComponent } from './table.component';
-import { EditUserModalModule } from '../EditUserModal/edit-user-modal.module';
+import { EditUserModalModule } from '../Edit/edit-user-modal.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({

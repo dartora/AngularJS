@@ -1,5 +1,3 @@
-import { random } from 'cypress/types/lodash';
-
 describe('Delete User', () => {
   it('Delete first user of table', () => {
     cy.visit('/');

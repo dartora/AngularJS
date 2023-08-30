@@ -19,7 +19,7 @@ h2 {
   margin-top: 10px;
   padding-top: 10px;
 }
-.buttons {
+.saveButton {
   padding-bottom: 10px;
 }
 /* Container styles */
@@ -77,7 +77,7 @@ fieldset {
 }
 
 /* Button styles */
-.buttons {
+.saveButton {
   text-align: center;
   margin-top: 2rem;
 }

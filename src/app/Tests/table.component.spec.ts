@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableComponent } from '../Components/Table/table.component';
+import { TableComponent } from '../Components/Users/Table/table.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TableModule } from '../Components/Table/table.module';
+import { TableModule } from '../Components/Users/Table/table.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TableComponent', () => {

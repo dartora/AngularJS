@@ -5,8 +5,8 @@ import {
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
 
-import { ConfirmDialogComponent } from '../Components/ConfirmDialog/confirm-dialog.component';
-import { ConfirmDialogModule } from '../Components/ConfirmDialog/confirm-dialog.module';
+import { ConfirmDialogComponent } from '../Components/Users/Delete/delete-dialog.component';
+import { ConfirmDialogModule } from '../Components/Users/Delete/delete-dialog.module';
 
 describe('ConfirmDialogComponent', () => {
   let component: ConfirmDialogComponent;

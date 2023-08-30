@@ -5,8 +5,8 @@ import { UserService } from 'src/app/Services/user.service';
 import { Router } from '@angular/router';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../ConfirmDialog/confirm-dialog.component'; // Adjust the import path
-import { EditUserModalComponent } from '../EditUserModal/edit-user-modal.component';
+import { ConfirmDialogComponent } from '../Delete/delete-dialog.component'; // Adjust the import path
+import { EditUserModalComponent } from '../Edit/edit-user-modal.component';
 
 @Component({
   selector: 'app-table',

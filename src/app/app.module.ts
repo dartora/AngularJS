@@ -9,11 +9,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { TableModule } from './Components/Table/table.module';
-import { EditUserModalModule } from './Components/EditUserModal/edit-user-modal.module';
+import { TableModule } from './Components/Users/Table/table.module';
+import { EditUserModalModule } from './Components/Users/Edit/edit-user-modal.module';
 import { PostsModule } from './Components//Posts/posts.module';
-import { CreateUserModule } from './Components/CreateUser/create-user.module';
-import { UsersModule } from './Components/Users/users.module';
+import { CreateUserModule } from './Components/Users/Create/create-user.module';
+import { UsersModule } from './Components/Users/User/users.module';
 
 @NgModule({
   declarations: [AppComponent],

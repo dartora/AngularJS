@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, catchError, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { IUser } from '../Components/Table/table.component';
+import { IUser } from '../Components/Users/Table/table.component';
 import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../Services/post.service';
 import { UserService } from 'src/app/Services/user.service';
-import { IUser } from 'src/app/Components/Table/table.component';
+import { IUser } from 'src/app/Components/Users/Table/table.component';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
