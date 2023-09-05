@@ -1,12 +1,14 @@
 # TestPersonalCard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+##Install dependencies
+
+Run `npm i`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## or u can see it on deployed on vercel
+## You can see it on deployed on vercel
 
 https://angular-studies-iota.vercel.app
 
@@ -14,6 +16,6 @@ https://angular-studies-iota.vercel.app
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## or u can see this tests in github actions pipeline
+## You can see this tests logs in github actions pipeline log.
 
 https://github.com/dartora/AngularJS/actions
