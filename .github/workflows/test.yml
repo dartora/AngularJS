@@ -1,0 +1,14 @@
+name: Test
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SFDigitalServices/wait-for-deployment-action@v1
+        id: deployment
+        with:
+          token: ${{ github.token }}
+          environment: Preview
+
+      - run: echo "Deployed to: ${{ steps.deployment.outputs.url }}"
