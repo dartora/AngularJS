@@ -19,3 +19,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## You can see this tests logs in github actions pipeline log.
 
 https://github.com/dartora/AngularJS/actions
+
+
+##test action
